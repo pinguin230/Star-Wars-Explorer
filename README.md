@@ -1,50 +1,54 @@
-# React + TypeScript + Vite
+Ось зразок **README** для вашого проєкту, враховуючи всі зроблені елементи дизайну, функціональність і використані технології.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+# Star Wars Heroes Explorer
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Star Wars Heroes Explorer** — це веб-додаток для пошуку персонажів із всесвіту Star Wars. Користувачі можуть шукати героїв за ім'ям, переглядати їхні деталі, а також навігувати через різні сторінки зі списком героїв.
 
-## Expanding the ESLint configuration
+## Технології
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Цей проект побудований з використанням таких технологій:
 
-- Configure the top-level `parserOptions` property like this:
+- **React**: бібліотека для побудови інтерфейсу користувача
+- **TypeScript**: мова програмування, що забезпечує типізацію та покращує підтримку коду
+- **React Router**: для маршрутизації в односторінковому додатку (SPA)
+- **SCSS**: препроцесор CSS, який дозволяє писати стилі в більш структурованому та зручному вигляді
+- **React Paginate**: бібліотека для реалізації пагінації
+- **Axios**: для виконання HTTP запитів до API
+- **Debounce** (lodash): для зменшення кількості запитів до API при введенні в полі пошуку
+- **Jest**: для виконання юніт-тестів
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Особливості
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- **Пошук героїв**: Пошук героїв за ім'ям із використанням дебаунсу, щоб зменшити навантаження на сервер при введенні запиту.
+- **Перегляд детальної інформації**: Перегляд інформації про героя, включаючи його висоту, масу, колір волосся, шкіри, очей, рік народження та стать.
+- **Пагінація**: Реалізація пагінації для списку героїв з можливістю перемикатися між сторінками.
+- **Відкриття зображення в повному екрані**: Можливість переглядати зображення героя в повноекранному режимі.
+- **Сторінки "Not Found" і "Error"**: Користувачі бачать відповідні сторінки в разі помилок або якщо герої не знайдені.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Установка
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+Щоб запустити цей проект локально на своєму комп'ютері, виконайте наступні кроки:
+
+1. Клонування репозиторію:
+   ```bash
+   git clone https://github.com/pinguin230/Star-Wars-Explorer.git
+   ```
+
+2. Перехід в каталог проекту:
+   ```bash
+   cd Star-Wars-Explorer
+   ```
+
+3. Встановлення залежностей:
+   ```bash
+   npm install
+   ```
+
+4. Запуск проекту:
+   ```bash
+   npm run dev
+   ```
+
+   Ваш додаток буде доступний за адресою: [http://localhost:5173](http://localhost:5173).
