@@ -1,0 +1,48 @@
+.root {
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  color: #555; /* Текст темно-сірий за замовчуванням */
+
+  li {
+    display: inline-flex;
+    padding: 4px;
+
+    a {
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      color: #4f6d7a; /* Замінили яскравий колір на більш спокійний */
+      border: 1px solid #4f6d7a;
+      border-radius: 50%;
+      width: 35px;
+      height: 35px;
+      cursor: pointer;
+      user-select: none;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: #4f6d7a; /* Замінили колір на спокійний сірий/синій */
+        color: white;
+      }
+    }
+  }
+
+  .selected {
+    font-weight: 400;
+
+    a {
+      background-color: #4f6d7a; /* Замінили на більш спокійний колір */
+      color: white;
+    }
+  }
+
+}
+
+@media (max-width: 600px) {
+  .root {
+    font-size: 16px; /* Зменшення шрифта для маленьких екранів */
+  }
+}

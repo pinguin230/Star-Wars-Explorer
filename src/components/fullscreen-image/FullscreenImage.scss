@@ -1,0 +1,20 @@
+.modal {
+  background-color: #bababa;
+  padding: 2rem;
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0 0 10px 0 #181817;
+  max-width: 50rem;
+  width: 100%;
+  z-index: 1;
+}
+
+.fullscreen-image img{
+  width: 100%;
+  //height: 30%;
+}
+
+.modal h2,
+.modal h1 {
+  margin: 0;
+}
